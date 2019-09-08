@@ -59,7 +59,7 @@
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="moddb.extension" version="0.1.0" />
+      <dependency id="moddb.extension" version="0.1.1" />
       <dependency id="png2ico" version="2008.12.08" />
       <dependency id="freedoom" version="0.11.3" />
     </dependencies>

@@ -27,6 +27,17 @@ $iconName = 'QCDE_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
 & png2ico.exe $iconPath $iconSrcPath
 
+$url = Get-ModdbDlUrl 'https://www.moddb.com/addons/start/170672'
+$packageArgs = @{
+  packageName   = "$env:ChocolateyPackageName" + "D4T"
+  unzipLocation = $installLocation
+  url           = $url
+  # softwareName  = 'qc-doom-edition-D4T*'
+  checksum      = '183A4B5002EC88CFAD0185D258343C387B557CF4B6D6F9EAD279EC008C1A3446'
+  checksumType  = 'sha256'
+}
+Install-ChocolateyZipPackage @packageArgs
+
 ## StartMenu
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'QCDE QuickGuide.lnk')" `
   -TargetPath "$(Join-Path $installLocation 'QCDE QuickGuide.txt')"
@@ -40,25 +51,25 @@ Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'QCDE Ch
   -TargetPath "$(Join-Path $installLocation 'QCDE Changelog.txt')"
 
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'QCDE Doom1.lnk')" `
-  -TargetPath "$zandronum" -Arguments "$ModPack -iwad $iWAD1" `
+  -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" -iwad $iWAD1" `
   -WorkingDirectory "$installLocation" `
   -IconLocation "$iconPath"
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $startMenuDir 'QCDE Doom2.lnk')" `
-  -TargetPath "$zandronum" -Arguments "$ModPack -iwad $iWAD2" `
+  -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" -iwad $iWAD2" `
   -WorkingDirectory "$installLocation" `
   -IconLocation "$iconPath"
 
 ## StartMenu - Multiplayer
 $SMMultiplayerDir = "$(Join-Path $startMenuDir 'Multiplayer')"
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $SMMultiplayerDir 'QCD2E [MP] startServer [LAN].lnk')" `
-  -TargetPath "$zandronum" -Arguments "$ModPack -iwad $iWAD2 -host -port 10666" `
+  -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" -iwad $iWAD2 -host -port 10666" `
   -WorkingDirectory "$installLocation"
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $SMMultiplayerDir 'QCD2E [MP] joinServer [LAN].lnk')" `
-  -TargetPath "$zandronum" -Arguments "$ModPack -iwad $iWAD2 -connect 127.0.0.1:10666" `
+  -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" -iwad $iWAD2 -connect 127.0.0.1:10666" `
   -WorkingDirectory "$installLocation"
 
 ## Desktop
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
-  -TargetPath "$zandronum" -Arguments "$ModPack -iwad $iWAD2" `
+  -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" -iwad $iWAD2" `
   -WorkingDirectory "$installLocation" `
   -IconLocation "$iconPath"

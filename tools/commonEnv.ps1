@@ -6,3 +6,5 @@ $shortcutPath = [IO.Path]::Combine($ENV:UserProfile, 'Desktop', "$GameName.lnk")
 
 $ModName = "QCDEv$ENV:ChocolateyPackageVersion"
 $ModPack = "$ModName.pk3"
+
+$D4Tsprites = 'QCDE D4T New Sprites v1.1.1.pk3'

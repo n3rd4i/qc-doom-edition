@@ -29,9 +29,24 @@
 			"group": "test"
 		},
 		{
+			"label": "upgrade",
+			"type": "shell",
+			"command": "start cmd '/k pushd ${workspaceFolder} && choco upgrade ${workspaceFolderBasename} -fdv -s .' -verb runas",
+			"options": {"shell": {"executable": "powershell.exe","args": ["-c"]}},
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": "test"
+		},
+		{
 			"label": "install",
 			"type": "shell",
-			"command": "start cmd '/k pushd ${workspaceFolder} && choco install ${workspaceFolderBasename} -fdv -s \".;https://chocolatey.org/api/v2/\"' -verb runas",
+			"command": "start cmd '/k pushd ${workspaceFolder} && choco install ${workspaceFolderBasename} -fdv -s .' -verb runas",
 			"options": {"shell": {"executable": "powershell.exe","args": ["-c"]}},
 			"presentation": {
 				"echo": true,
