@@ -10,7 +10,7 @@
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.5.1</version>
+    <version>2.5.1.20190911</version>
     <packageSourceUrl>https://github.com/n3rd4i/qc-doom-edition</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>n3rd4i</owners>
@@ -35,7 +35,13 @@
     <summary>“QC: Doom Edition” is a mod that brings the weapons from the latest Quake game, into Doom, with delicious pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes, each one with unique status, speed, active and passive abilities</summary>
     <description>
 
-## MAIN FEATURES
+![logo](https://cdn.statically.io/img/media.moddb.com/images/mods/1/35/34614/auto/6DCott0.png)
+
+### WHAT IS THIS?
+
+“QC: Doom Edition” is a mod that brings the weapons from the latest Quake game, into Doom, with delicious pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes, each one with unique status, speed, active and passive abilities
+
+### MAIN FEATURES
 * All weapons from Quake Champions, with faithful firing times for best transferable experience
 * Weapon upgrades that give each weapon a whole new role
 * 30 champions to play, each with unique abilities
