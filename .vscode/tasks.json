@@ -57,6 +57,12 @@
 				"clear": false
 			},
 			"group": "test"
+		},
+		{
+			"label": "clean",
+			"type": "shell",
+			"command": "del /s /q *.nupkg",
+			"problemMatcher": []
 		}
 	]
 }

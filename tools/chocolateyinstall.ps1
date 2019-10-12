@@ -46,7 +46,7 @@ $iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
 Get-ChocolateyWebFile -PackageName $iconSrc `
   -FileFullPath $iconSrcPath `
   -Url 'https://cdn.statically.io/img/zdoom.org/w/images/thumb/a/af/QCDE_logo.png/120px-QCDE_logo.png' `
-  -Checksum 'CC23A9F1355EC724679D4804007F58E94F9E89AFC2ADDDA15B786C45561A33FF' `
+  -Checksum 'B6A40C0F44E880F184F3D973A8F2D956D96FD0C6B0DB0BE023A16AC3D513A00F' `
   -ChecksumType 'sha256'
 $iconName = 'QCDE_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
