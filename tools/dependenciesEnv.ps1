@@ -1,4 +1,4 @@
-$zandronumLocation = [IO.Path]::Combine($ENV:LocalAppData, 'Programs', 'Zandronum')
+$zandronumLocation = "$ENV:ZANDRONUM_INSTALL_DIR"
 $zandronum = "$(Join-Path $zandronumLocation zandronum.exe)"
 
 # $freedoomLocation = [IO.Path]::Combine($ENV:LocalAppData, 'Programs', 'FreeDoom')

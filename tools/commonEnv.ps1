@@ -1,8 +1,9 @@
 ## Common between Install and Uninstall
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
 $GameName = "QuakeChampions Doom Edition"
-$installLocation = [IO.Path]::Combine($ENV:LocalAppData, 'Programs', "$GameName")
-$startMenuDir = [IO.Path]::Combine($ENV:AppData, 'Microsoft\Windows\Start Menu\Programs', "$GameName")
-$shortcutPath = [IO.Path]::Combine($ENV:UserProfile, 'Desktop', "$GameName.lnk")
+$installLocation = "$(Join-Path $toolsDir $GameName)"
+$startMenuDir = [IO.Path]::Combine($ENV:ProgramData, 'Microsoft\Windows\Start Menu\Programs', $GameName)
 
 $ModPack = "QCDEv2.5.1.pk3"
 $D4Tsprites = 'QCDE D4T New Sprites v1.1.1.pk3'
