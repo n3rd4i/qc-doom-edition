@@ -10,7 +10,7 @@ $packageArgs = @{
   unzipLocation = $installLocation
   url           = $url
   softwareName  = 'qc-doom-edition*'
-  checksum      = '4B4E43245FBF3CBEBCF1B666546482D65F5D0D71F2DF7CED6ADF578EDC8623B6'
+  checksum      = 'FCAC9FFD6289843EA07E3973925869C417A8FDDBA531F4B7E8D17FB59221B32D'
   checksumType  = 'sha256'
 }
 Install-ChocolateyZipPackage @packageArgs
@@ -46,7 +46,7 @@ $iconSrcPath = "$(Join-Path $ENV:TEMP $iconSrc)"
 Get-ChocolateyWebFile -PackageName $iconSrc `
   -FileFullPath $iconSrcPath `
   -Url 'https://cdn.statically.io/img/zdoom.org/w/images/thumb/a/af/QCDE_logo.png/120px-QCDE_logo.png' `
-  -Checksum 'CC23A9F1355EC724679D4804007F58E94F9E89AFC2ADDDA15B786C45561A33FF' `
+  -Checksum '9351321A90668178852DA6A43DFA88AA452ECF23A3D156503CDE9EDDCD1D8C98' `
   -ChecksumType 'sha256'
 $iconName = 'QCDE_logo.ico'
 $iconPath = "$(Join-Path $toolsDir $iconName)"
