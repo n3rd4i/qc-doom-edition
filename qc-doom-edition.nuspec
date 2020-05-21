@@ -68,6 +68,7 @@
       <dependency id="moddb.extension" version="0.1.1" />
       <dependency id="png2ico" version="2008.12.08" />
       <dependency id="freedoom" version="0.12.1" />
+      <dependency id="kb2919355" />
     </dependencies>
   </metadata>
   <files>
