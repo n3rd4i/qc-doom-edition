@@ -94,9 +94,3 @@ Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $SMMultiplayerDir 'QCD
 Install-ChocolateyShortcut -ShortcutFilePath "$(Join-Path $SMMultiplayerDir 'QCD2E [MP] joinServer [LAN].lnk')" `
   -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" `"$HDFaces`" `"$MPMaps`" -iwad $iWAD2 -connect 127.0.0.1:10666" `
   -WorkingDirectory "$installLocation"
-
-## Desktop
-# Install-ChocolateyShortcut -ShortcutFilePath "$shortcutPath" `
-#   -TargetPath "$zandronum" -Arguments "$ModPack `"$D4Tsprites`" `"$HDFaces`" -iwad $iWAD2" `
-#   -WorkingDirectory "$installLocation" `
-#   -IconLocation "$iconPath"
